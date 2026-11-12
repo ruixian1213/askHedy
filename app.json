@@ -1,25 +1,66 @@
 {
   "expo": {
     "name": "askHedy",
-    "slug": "askHedy",
+    "slug": "askhedy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": [
+      "askhedy",
+      "com.googleusercontent.apps.859356300216-ur9bn9tj7evtc510v667r48bop8vlv96"
+    ],
     "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFF7F3"
+    },
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.askhedy.app",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "用 Face ID 保護你的 API 金鑰與 Google 授權。",
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
+      "package": "com.askhedy.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+        "backgroundColor": "#FFF7F3",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-web-browser",
+      "expo-image",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "googleIosClientId": "859356300216-ur9bn9tj7evtc510v667r48bop8vlv96.apps.googleusercontent.com",
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "cef715b6-1bcd-496a-8f8c-6ebe6648ea8b"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/cef715b6-1bcd-496a-8f8c-6ebe6648ea8b"
     }
   }
 }
